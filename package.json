@@ -1,0 +1,23 @@
+{
+  "name": "HTTPServerVersion2",
+  "version": "2.0.1",
+  "description": "A simple http server that responds to get/put/post/delete to access a notes directory",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Farhad",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "chai-http": "^1.0.0",
+    "express": "^4.13.1",
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^1.11.2",
+    "mocha": "^2.2.5"
+  }
+}
