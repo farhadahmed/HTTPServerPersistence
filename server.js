@@ -5,7 +5,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 
 var app = express();
-var notes = './lib/notes';
+var notes = './lib/notes/';
 var counter = fs.readdirSync(notes).length;
 
 app.use(bodyParser.json()); //parse console input into json
@@ -13,7 +13,7 @@ app.use(bodyParser.json()); //parse console input into json
 app.get('/', function(req, res) {
   fs.readFile(notes + '/' + req.params.file, function(err, data) {
     if(err) {
-      res.status(404).send('Not found');
+      res.status(500).send('Not found');
     } else {
       res.contentType(req.params.file);
       res.send(data);
